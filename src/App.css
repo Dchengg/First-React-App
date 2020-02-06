@@ -18,7 +18,36 @@ a{
   padding: 0 1 rem
 }
 
-.btn{
+.header{
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.link{
+  color: #fff;
+  text-decoration: none;
+}
+
+.deleteBtn{
+  background: #a84232;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  float: right;
+}
+
+.todo{
+  background: #f4f4f4;
+  padding: 10px;
+  border-bottom: 1px #ccc dotted;
+}
+
+.checkbox{
   display: inline;
   border: none;
   background: rgb(89, 158, 75);
