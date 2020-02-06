@@ -31,13 +31,13 @@ class App extends React.Component {
     }
   }
 
-  eliminateItem (id) {
+  eliminateItem = (id) => {
     this.setState({
       todos: this.state.todos.filter(todo => id !== todo.id)
     })
   }
 
-  markComplete (id) {
+  markComplete = (id) => {
     this.setState({
       todos: this.state.todos.map(todo => {
         if (todo.id === id) {
@@ -48,7 +48,7 @@ class App extends React.Component {
     })
   }
 
-  addTodo (title) {
+  addTodo = (title) => {
     const newTodo = {
       id: uuid.v4(),
       title: title,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-export class TodoItem extends Component {
+class TodoItem extends Component {
   getLineThrough () {
     return {
       textDecoration: this.props.todo.completed
@@ -21,6 +22,12 @@ export class TodoItem extends Component {
       </div>
     )
   }
-} 
+}
+
+TodoItem.propTypes = {
+  todo: PropTypes.array.isRequired,
+  markComplete: PropTypes.func.isRequired,
+  eliminateItem: PropTypes.func.isRequired
+}
 
 export default TodoItem

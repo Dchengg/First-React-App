@@ -12,7 +12,9 @@ class Todos extends React.Component {
 
 // Prop types are used to ask for the requiered certain props to be able to instance it
 Todos.propTypes = {
-  todos: PropTypes.array.isRequired
+  todos: PropTypes.array.isRequired,
+  markComplete: PropTypes.func.isRequired,
+  eliminateItem: PropTypes.func.isRequired
 }
 
 export default Todos
