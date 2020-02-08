@@ -1,42 +1,49 @@
 import React, { Component } from 'react'
 
-class AddTodo extends Component{
-    state = {
-        title: ''
+class AddTodo extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      title: ' '
     }
+  }
 
-    onChange = (e) => this.setState({[e.target.name]: 
-        e.target.value});
+  onChange = (e) => {
+    this.setState({
+      [e.target.name]:
+        e.target.value
+    })
+  }
 
-    onSubmit = (e) => {
-        e.preventDefault();
-        this.props.addTodo(this.state.title);
-        this.setState({title:''})
-    }
+  onSubmit = (e) => {
+    e.preventDefault()
+    this.props.addTodo(this.state.title)
+    this.setState({ title: '' })
+  }
 
-    render(){
-        return(
-            <form onSubmit={this.onSubmit} style={{display: 'flex'}}>
-                <input 
-                    type= "What do you need to do.."
-                    name= 'title'
-                    style={{ 
-                        flex: '10',
-                        padding: '5px'
-                    }}
-                    placeholder="Add Todo..."
-                    value={this.state.title}
-                    onChange=  {this.onChange}
-                />
-                <input
-                    type= "submit"
-                    value= "Submit"
-                    className= "btn"
-                    style={{flex: '1'}}
-                />
-            </form>
-        )
-    }
+  render () {
+    return (
+      <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
+        <input
+          type= "What do you need to do.."
+          name= 'title'
+          style={{
+            flex: '10',
+            padding: '5px'
+          }}
+          placeholder="Add Todo..."
+          value={this.state.title}
+          onChange= {this.onChange}
+        />
+        <input
+          type= "submit"
+          value= "Submit"
+          className= "btn"
+          style={{ flex: '1' }}
+        />
+      </form>
+    )
+  }
 }
 
-export default AddTodo;
+export default AddTodo
